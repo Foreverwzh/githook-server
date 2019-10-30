@@ -6,12 +6,12 @@ import (
 )
 
 type repository struct {
-	Name string `form:"name" json:"name" xml:"name"  binding:"required"`
-	Default_branch string `form:"default_branch" json:"default_branch" xml:"default_branch"  binding:"required"`
+	Name string `json:"name" binding:"required"`
+	Default_branch string `json:"default_branch" binding:"required"`
 }
 
 type push struct {
-	Repository repository `form:"user" json:"user" xml:"user"  binding:"required"`
+	Repository repository `json:"repository" binding:"required"`
 }
 
 func main() {

@@ -1,7 +1,7 @@
-FROM golang:1.13
+
+#build stage
+FROM golang:alpine AS builder
 COPY . /app
 WORKDIR /app
-RUN go get github.com/gin-gonic/gin
-RUN go build -o main .
+ENTRYPOINT ["./main"]
 EXPOSE 8080
-CMD ["./main"]

@@ -23,7 +23,7 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		// c.JSON(200, gin.H{"name":json.Repository.Name,"branch": json.Repository.Default_branch})
+		c.JSON(200, gin.H{"name":json.Repository.Name,"branch": json.Repository.Default_branch})
 		// switch json.Repository.Default_branch {
 		// case "master":
 		// 	cmd := exec.Command("git", "pull", "origin", "master")

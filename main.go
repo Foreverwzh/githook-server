@@ -32,8 +32,9 @@ func main() {
 			if err!=nil {
 				fmt.Println(err)
 				c.JSON(200, gin.H{"error": err.Error()})
+			} else {
+				c.JSON(200, gin.H{"status": "Success"})
 			}
-			c.JSON(200, gin.H{"status": "Success"})
 		default:
 			fmt.Printf("unknow branch %v", json.Repository.Default_branch)
 		}

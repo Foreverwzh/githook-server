@@ -1,13 +1,14 @@
 # githook-server
 
+<pre>
 
-git clone https://github.com/Foreverwzh/githook-server/new/master?readme=1
-
-cd githook-server
+git clone https://github.com/Foreverwzh/githook-server.git
+</pre>
 
 <pre>
 //将id_rsa文件拷贝到本项目.ssh文件夹下
 
+cd githook-server
 mkdir .ssh
 cp $HOME/.ssh/id_rsa .ssh/id_rsa
 </pre>

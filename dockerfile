@@ -9,9 +9,9 @@ ENV GOARCH amd64
 ENV GO111MODULE on
 ENV GOPROXY https://goproxy.io
 
-RUN apk update && apk add git
+RUN apk update && apk add git openssh
 COPY . /app
 WORKDIR /app
-RUN go build main.go
-ENTRYPOINT ["./main"]
-EXPOSE 8080
+# RUN go build main.go
+# ENTRYPOINT ["./main"]
+# EXPOSE 8080

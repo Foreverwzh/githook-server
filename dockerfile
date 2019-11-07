@@ -17,6 +17,6 @@ RUN cp .ssh/id_rsa /root/.ssh/id_rsa
 
 RUN touch /root/.ssh/known_hosts
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
-# RUN go build main.go
-# ENTRYPOINT ["./main"]
-# EXPOSE 8080
+RUN go build main.go
+ENTRYPOINT ["./main"]
+EXPOSE 8080
